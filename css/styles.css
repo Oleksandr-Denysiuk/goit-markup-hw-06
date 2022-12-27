@@ -513,6 +513,11 @@ button {
   margin-bottom: 16px;
 }
 
+.footer-form-label {
+  display: block;
+  margin-right: 24px;
+}
+
 .footer-form-input {
   width: 264px;
   height: 40px;
@@ -521,7 +526,6 @@ button {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   padding: 8px 16px;
-  margin-right: 24px;
   color: #ffffff;
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -544,7 +548,7 @@ button {
   width: 165px;
   height: 40px;
   background-color: var(--accent-color);
-  outline: none;
+
   border-radius: 4px;
   border: none;
 
@@ -696,12 +700,12 @@ button {
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
-
   transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 1;
   scale: 1;
+  visibility: 1;
 }
 
 .modal {
@@ -720,6 +724,7 @@ button {
   padding-top: 70px;
   padding-left: 24px;
   padding-right: 24px;
+  padding-bottom: 26px;
 }
 
 .is-hidden {
@@ -742,19 +747,19 @@ button {
   padding: 0;
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn:hover,
 .close-btn:focus {
-  border: none;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    0px 1px 6px rgba(46, 47, 66, 0.16), 0px 2px 6px rgba(46, 47, 66, 0.08);
 }
 
-.close-svg {
-  width: 8px;
-  height: 8px;
+.close-btn:active {
+  background-color: var(--accent-color);
+  fill: #ffffff;
 }
 
 /* =============== form ================= */
@@ -866,6 +871,10 @@ textarea::placeholder {
   border-color: #404bbf;
 }
 
+.form-checkbox:focus + .form-check-label::before {
+  outline: 1px solid #404bbf;
+}
+
 .form-check-label {
   display: flex;
   align-items: center;
@@ -893,26 +902,27 @@ textarea::placeholder {
 }
 
 .form-link {
-  text-decoration: none;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.04em;
+  color: var(--accent-color);
 }
 
 .form-button {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 26px;
+
   padding: 16px 32px;
   width: 169px;
   height: 56px;
   background: #4d5ae5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
 
   font-family: "Roboto";
   font-weight: 500;
